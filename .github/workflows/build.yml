@@ -12,7 +12,7 @@ jobs:
       with:
         ref: develop
     - name: package
-      run: sudo apt-get -y install gfortran mpich libmpich-dev libboost-all-dev libblas-dev liblapack-dev liblapacke-dev libscalapack-mpi-dev
+      run: sudo apt-get update && sudo apt-get -y install gfortran mpich libmpich-dev libboost-all-dev libblas-dev liblapack-dev liblapacke-dev libscalapack-mpi-dev
     - name: cmake
       run: mkdir build && cd build && cmake ..
     - name: make
